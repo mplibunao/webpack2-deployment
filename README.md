@@ -10,3 +10,9 @@ git clone https://github.com/StephenGrider/WebpackProject.git
 cd WebpackProject
 npm install
 ```
+
+To push only the contents of the `dist` folder run
+
+```
+git subtree push --prefix dist origin gh-pages
+``` 

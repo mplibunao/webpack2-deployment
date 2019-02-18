@@ -1,18 +1,34 @@
-# UpStarMusic
-Starter Repo for a Webpack course on Udemy
+### Github pages
 
-You can download this repository by using the green `Clone or Download` button on the right hand side of this page.  This will present you with the option to either clone the repository using Git, or to download it as a zip file.
-
-If you want to download it using git, copy paste the link that is presented to you, then run the following at your terminal:
-
-```
-git clone https://github.com/StephenGrider/WebpackProject.git
-cd WebpackProject
-npm install
-```
+- https://mplibunao.github.io/webpack2-deployment/#/
 
 To push only the contents of the `dist` folder run
 
 ```
 git subtree push --prefix dist origin gh-pages
 ``` 
+
+### S3
+
+-  http://mp-webpack2-s3-deploy.s3-website-us-east-1.amazonaws.com
+
+```
+npm install -g s3-website
+touch .env
+# Fill the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY 
+
+# Create the s3 bucket
+s3-website create <name-of-bucket>
+s3-website deploy dist
+```
+
+```
+https://github.com/klaemo/s3-website
+Your AWS credentials should either be in ~/.aws/credentials, a file in the local directory entitled .env with the values
+
+AWS_ACCESS_KEY_ID=MY_KEY_ID
+AWS_SECRET_ACCESS_KEY=MY_SECRET_KEY
+or in the environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
+
+Your website policy and configuration will only be sent to S3 when it differs from the existing.
+```

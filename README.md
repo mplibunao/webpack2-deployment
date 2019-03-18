@@ -32,3 +32,12 @@ or in the environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
 
 Your website policy and configuration will only be sent to S3 when it differs from the existing.
 ```
+
+### Heroku
+
+- Create a `Procfile` and indicate the command to run our application
+
+```
+heroku create
+git push heroku master
+```
